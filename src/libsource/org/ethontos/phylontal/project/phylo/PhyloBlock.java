@@ -1,6 +1,6 @@
 /*
  * Phylontal - a tool for phylogenetic alignment of ontologies
- * Copyright 2009-2010 Peter E. Midford
+ * Copyright 2009-2011 Peter E. Midford
  *
  * Phylontal is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -16,7 +16,7 @@
  * along with Phylontal.  If not, see <http://www.gnu.org/licenses/>.
  *  
  * Created on Oct 13, 2009
- * Last updated on Mar 5, 2010
+ * Last updated on April 27, 2011
  * 
  */
 package org.ethontos.phylontal.project.phylo;

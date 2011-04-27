@@ -1,6 +1,6 @@
 /*
  * Phylontal - a tool for phylogenetic alignment of ontologies
- * Copyright 2009-2010 Peter E. Midford
+ * Copyright 2009-2011 Peter E. Midford
  * 
  * This file is part of Phylontal.
  *
@@ -18,7 +18,7 @@
  * along with Phylontal.  If not, see <http://www.gnu.org/licenses/>.
  * 
  * Created on Dec 16, 2009
- * Last updated on Mar 5, 2010
+ * Last updated on April 27, 2011
  * 
  */
 package org.ethontos.phylontal.project.impl;
@@ -31,6 +31,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+
+import junit.framework.Assert;
 
 import org.apache.log4j.BasicConfigurator;
 import org.ethontos.phylontal.project.Project;
@@ -58,7 +60,7 @@ public class TestGraphTree {
     private PhyloNode parent = null;
     
     // this needs to be relativized
-    final private static String  SIXTREENAME = "/Users/peter/Projects/workspace/phylontal/test/testFiles/TreeSix.xml";
+    final private static String SIXTREENAME = "/Users/peter/Projects/workspace/phylontal/test/testFiles/TreeSix.xml";
     
     final private static String TESTTAXONBLOCKID = "trees55";
     final private static String TESTTAXONBLOCKLABEL = "Test trees";
@@ -92,11 +94,13 @@ public class TestGraphTree {
         assertFalse(treeList==null);
         assertFalse(treeList.isEmpty());
         readTree = treeList.get(0);
+        Assert.assertNotNull(readTree);
     }
 
     @After
     public void tearDown() throws Exception {
     }
+    
 
     @Test
     public void testSetName(){
@@ -156,16 +160,6 @@ public class TestGraphTree {
         assertTrue(leaves.size() == 2);
         assertTrue(leaves.contains(leaf1));
         assertTrue(leaves.contains(leaf2));
-//        NexmlReader reader = new NexmlReader();
-//        reader.readFromFile(new File(SIXTREENAME));
-//        List<GraphTree>treeList = reader.getTrees();
-//        GraphTree firstTree = treeList.get(0);
-//        assertFalse(firstTree ==null);
-//        leaves = firstTree.getExternalNodes();
-//        assertFalse(leaves == null);
-//        assertFalse(leaves.isEmpty());
-//        assertTrue(leaves.size() == 6);
-
     }
 
     @Test

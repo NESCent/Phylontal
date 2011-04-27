@@ -1,6 +1,6 @@
 /*
  * Phylontal - a tool for phylogenetic alignment of ontologies
- * Copyright 2009-2010 Peter E. Midford
+ * Copyright 2009-2011 Peter E. Midford
  * This file is part of Phylontal.
  *
  * Phylontal is free software: you can redistribute it and/or modify
@@ -17,7 +17,7 @@
  * along with Phylontal.  If not, see <http://www.gnu.org/licenses/>.
  * 
  * Created on Oct 12, 2009
- * Last updated on Mar 4, 2010
+ * Last updated on April 27, 2011
  * 
  */
 package org.ethontos.phylontal.project.phylo.impl;
@@ -39,12 +39,9 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.ethontos.phylontal.project.Project;
-import org.ethontos.phylontal.project.impl.DataFactory;
-import org.ethontos.phylontal.project.impl.ProjectImpl;
 import org.ethontos.phylontal.project.impl.TripleStore;
 import org.ethontos.phylontal.project.phylo.ExternalNode;
 import org.ethontos.phylontal.project.phylo.GraphTree;
-import org.ethontos.phylontal.project.phylo.PMatrixCell;
 import org.ethontos.phylontal.project.phylo.PMatrix;
 import org.ethontos.phylontal.project.phylo.PhyloBlock;
 import org.ethontos.phylontal.project.phylo.PhyloEdge;
@@ -290,7 +287,7 @@ public class NexmlReader {
             final List<OTUs> xmlOTUsList = xmlDocument.getOTUsList();     
             taxaBlockList = readTaxaBlocks(xmlOTUsList);
             matrices= readMatrices(xmlMatrixList,taxaBlockList,matrices);
-            for(PMatrix m : matrices){
+            for(PMatrix<?> m : matrices){
             }
         }
     }

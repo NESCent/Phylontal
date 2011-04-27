@@ -1,6 +1,6 @@
 /*
  * Phylontal - a tool for phylogenetic alignment of ontologies
- * Copyright 2009 Peter E. Midford
+ * Copyright 2009-2011 Peter E. Midford
  * 
  * This file is part of Phylontal.
  *
@@ -18,7 +18,7 @@
  * along with Phylontal.  If not, see <http://www.gnu.org/licenses/>.
  * 
  * Created on Apr 20, 2010
- * Last updated on Apr 20, 2010
+ * Last updated on Apr 27, 2011
  * 
  */
 package org.ethontos.phylontal.project.impl;
